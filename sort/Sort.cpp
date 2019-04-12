@@ -1,9 +1,10 @@
 #include <iostream>
-// #include <math.h>
+#include <math.h>
 #include <stdlib.h>
 #include <ctime>
 #include <algorithm>
 #include <random>
+#include <limits.h>
 using namespace std;
 
 void swap(int &a, int &b)
@@ -179,7 +180,7 @@ void revive(int *array, int *bk, int N)
 int main()
 {
 
-    const int N = 60000;
+    const int N = 1000000;
     int array[N];
     int bk_array[N];
 
@@ -206,7 +207,7 @@ int main()
             array[i - 1] = dist(rd);
             bk_array[i - 1] = array[i - 1];
         }
-        for (int num = 1; num <= 3; num++)
+        for (int num = 1; num <= 7; num++)
         {
 
             begin = clock();
@@ -239,6 +240,6 @@ int main()
 
             cout << endl;
         }
+        cout << endl;
     }
-    system("pause");
 }
